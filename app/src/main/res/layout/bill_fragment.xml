@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/totalCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Total Cost"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Items Below"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/addItemCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Item Cost"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/addItemCostButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Cost"/>
+
+        <Button
+            android:id="@+id/repeatLastItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repeat Last Item"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:stretchColumns="*">
+            <View
+                android:layout_height="2dip"
+                android:background="#FF909090" />
+            <TableRow>
+                <TextView
+                    android:text="Price"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="Actual Price"
+                    android:padding="3dip" />
+            </TableRow>
+            <View
+                android:layout_height="2dip"
+                android:background="#FF909090" />
+        </TableLayout>
+
+        <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TableLayout
+            android:id="@+id/totalLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:stretchColumns="*">
+            <View
+                android:layout_height="2dip"
+                android:background="#FF909090" />
+            <TableRow>
+                <TextView
+                    android:text="Total Highlighted"
+                    android:padding="3dip" />
+                <TextView
+                    android:id="@+id/totalHighlighted"
+                    android:text="0"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Tax Percentage"
+                    android:padding="3dip" />
+                <TextView
+                    android:id="@+id/percentage"
+                    android:text="(0%)"
+                    android:padding="3dip" />
+            </TableRow>
+            <View
+                android:layout_height="2dip"
+                android:background="#FF909090" />
+        </TableLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/clearSelection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear selection"/>
+
+        <Button
+            android:id="@+id/deleteSelection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete selection"/>
+    </LinearLayout>
+</LinearLayout>
+
+
+
